@@ -1,0 +1,197 @@
+<html>
+    <head>
+        <title id="title">Weather</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/index_style.css">
+    </head>
+    <body  class="bg-dark">
+        
+        <header>
+            <nav class="  navbar navbar-expand-lg navbar-dark bg-dark py-5">
+                <div class="container ">
+
+                    <a href="#" class=" text-decoration-none">
+                                <img src="imags/img.png" alt="Weather" class="me-3 ">
+                                <div class="logoContent float-end">
+                                    <h1 class=" title text-white fs-6">Weather</h1>
+                                    <p class="description text-white">tagline goes here</p>
+                                </div>
+                    </a>
+
+                    <div class="d-flex">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class=" navlinks collapse navbar-collapse " id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                        <a class="nav-link active rounded-pill" aria-current="page"  href="#">Home</a>
+                        <a class="nav-link rounded-pill" aria-current="page" href="#">News</a>
+                        <a class="nav-link rounded-pill" aria-current="page" href="#">Live cameras</a>
+                        <a class="nav-link rounded-pill" aria-current="page" href="#">Photos</a>
+                        <a class="nav-link rounded-pill" aria-current="page" href="#">Contact</a>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </nav>
+        </header>
+
+
+        <section id="home">
+            
+
+                <div class="homeContent ">
+                    <div class=" findloaction py-5" >
+                        <input id="findloaction" type="text" placeholder="Find Your location..." class=" text-white form-control w-75 m-auto rounded-pill bg-dark p-3 border-0 " >
+
+                        <button class=" find btn btn-primary rounded-pill">Find</button>
+                    </div>
+
+                    <div class=" container">
+                        <div class="row">
+                            <div class=" today col-8 bg-dark text-white m-auto border border-2 border-info">
+                                <div class="header my-3 d-flex justify-content-between">
+                                    <p id="Day"></p>
+                                    <p id="DayInmonth"></p>
+                                </div>
+                                <div class="todaycontent">
+                                    <div class="nameofcity"> <h4 id="nameofcity" class=" fs-4 ps-2 pt-2"></h4> </div>
+
+                                    <div class="degree d-flex justify-content-around align-items-center  ">
+                                        <div>
+                                            <h2 class= "ms-5" id="degree">°C</h2>
+                                        </div>
+                                        <img src="" class=" CurrentIcon img-fluid">
+                                    </div>
+
+                                    <div>
+                                        <h5 class="condition ps-2 text-info" id="condition"> </h5>
+                                                <!-- <!=========icons==========!> -->
+                                        <div class=" boxIcons text-white d-flex justify-content-between pt-3">
+                                            <div>
+                                                <img src="imags/icons/cloudy.svg" class=""> <span id="cloud"></span>
+                                                <br>
+                                                <span class="cloud">cloud</span>
+                                            </div>
+
+                                            <div>
+                                                <img src="imags/icons/wind.svg" class=""><span id="Wind"></span>
+                                                <br>
+                                                <span class="Wind">Wind</span>
+                                            </div>
+
+                                            <div>
+                                                <img src="imags/icons/windsock.svg" class=""> <span id="WindDirection"></span>
+                                                <br>
+                                                <span class="WindDirection">Wind Direction</span>
+                                            </div>
+                                        </div>
+
+                                        <div class=" py-3 boxIcons text-white d-flex justify-content-between pt-3">
+                                            <div>
+                                                <img src="imags/icons/sunrise.svg" class=""> <span id="Sunrise"></span>
+                                                <br>
+                                                <span class="Sunrise">Sunrise</span>
+                                            </div>
+
+                                            <div>
+                                                <img src="imags/icons/sunset.svg" class=""><span id="Sunset"></span>
+                                                <br>
+                                                <span class="Sunset">Sunset</span>
+                                            </div>
+
+                                            <div>
+                                                <img src="imags/icons/moonrise.svg" class=""> <span id="Moonrise"></span>
+                                                <br>
+                                                <span class="Moonrise">Moonrise </span>
+                                            </div>
+
+                                            <div>
+                                                <img src="imags/icons/moonset.svg" class=""> <span id="Moonset"></span>
+                                                <br>
+                                                <span class="Moonset">Moonset</span>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                                <!-- <!=======================NextDay=====================> -->
+                        <div class="row justify-content-center">
+                            <h2 class="text-info text-center py-3">Next Days</h2>
+                            <div class="NextDay text-white col-4 border border-2 border-info">
+                                <div class=" py-3 text-white nextDayhead d-flex justify-content-between">
+                                    <p id="Day_nextDay"></p>
+                                    <p id="Day_NextDayInmonth"></p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-center"><img src="" class=" nextdayicon img-fluid w-50"></div>
+                                    <div class=" d-flex justify-content-center">
+                                        <div> <span class="nextmax text-center" id="nextDaymaxTemp"></span></div>
+                                        <div> <span class="nextmin text-center" id="nextDayminTemp"></span></div>
+                                    </div>
+                                    <div class="py-2"><span class="text-info text-center" id="NextDayCondition"></span></div>
+                                </div>
+                            </div>
+                                <!-- <!=======================NextDay2=====================> -->
+                            <div class="NextDay2 text-white col-4 border border-2 border-info">
+                                <div class=" py-3 nextDay2head d-flex justify-content-between">
+                                    <p id="Day_nextDay2"></p>
+                                    <p id="Day_NextDayInmonth2"></p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-center"><img src="" class=" nextdayicon2 img-fluid w-50"></div>
+                                    <div class=" d-flex justify-content-center">
+                                        <div> <span class="nextmax2 text-center" id="nextDay2maxTemp"></span></div>
+                                        <div> <span class="nextmin2 text-center" id="nextDay2minTemp"></span></div>
+                                    </div>
+                                    <div class="py-2"><span class="text-info" id="NextDay2Condition"></span></div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+        </section>
+
+        <footer id="footer"> 
+
+                <div class="container py-5">
+                    <div class=" row justify-content-around ">
+                                <div class=" box-subscribe col-8">
+                                    <input id="subscribe" type="text" placeholder="Enter Your Email To subscribe" class="text-white form-control w-100 rounded-pill bg-dark p-3 border-2 " >
+                                    <button class="btn btn-primary rounded-pill">subscribe</button>
+                                </div>
+                        
+                        <div class=" col-4">
+                            <div class=" social d-flex justify-content-center align-items-center flex-row">
+                                <i class="fab fa-facebook fs-3 p-2"></i>
+                                <i class="fab fa-twitter fs-3 p-2"></i>
+                                <i class="fab fa-google-plus fs-3 p-2"></i>
+                                <i class="fab fa-pinterest fs-3 p-2 "></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-3 text-white">
+                        <p>Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+                    </div>
+                </div>
+            
+        </footer>
+
+
+
+        
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/Declaration-And-Icons.js"></script>
+        <script src="js/mine.js"></script>
+    </body>
+</html>

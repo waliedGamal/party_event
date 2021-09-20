@@ -1,0 +1,131 @@
+body
+{
+    font-family: "Open Sans", "sans-serif";
+}
+#home .logoContent p
+{
+    font-size: 10px;
+}
+#home .navlinks a
+{
+    padding: 3px 20px;
+    margin: 5px;
+    border: 2px solid transparent;
+    font-weight: 400;
+    color:#ffff;
+    font-size: 14px;
+}
+.navbar-dark .navbar-nav .nav-link.active
+{
+    border: 2px solid #009ad8 !important;
+    color: #009ad8 !important; 
+}
+#home .navlinks a:hover
+{
+    border: 2px solid #009ad8;
+    color: #009ad8;
+}
+#home .homeContent
+{
+    background-image: url(../imags/img1.png);
+    background-repeat: no-repeat;
+}
+#home .homeContent .findloaction
+{
+    position: relative;
+}
+#home .homeContent .find
+{
+    padding: 10px 40px;
+    position: absolute;
+    right:180px;
+    top:53px
+}
+#home .homeContent .today
+{
+    background-color:#323544;
+}
+#home .homeContent .header
+{
+    background-color: rgba(0,0 , 0,0.1);
+}
+.degree h2
+{
+    font-size: 6rem;
+    line-height: 120px;
+    font-weight: 600;
+}
+.degree .symbol
+{
+    font-size: 5rem;
+}
+
+.boxIcons img
+{
+    width: 50%;
+}
+.CurrentIcon
+{
+    width: 35% !important;
+}
+
+.boxIcons .cloud , .Wind , .WindDirection , .Sunrise , .Sunset , .Moonrise , .Moonset
+{
+    margin-left: 40px;
+    font-size: 1.2rem;
+}
+
+.NextDay .nextmax , .nextmax2 
+{
+    font-size: 2.5rem; 
+    margin-right: 10px;  
+}
+.NextDay .nextmin,.nextmin2
+{
+    font-size: 1.5rem;  
+    line-height: 50px;
+    font-weight: 600; 
+}
+
+#NextDayCondition , #NextDay2Condition
+{
+    font-size:1.2rem ;
+}
+#footer
+{
+    background-color: #292b33;
+}
+#footer .box-subscribe
+{
+    position: relative;
+}
+
+#footer .box-subscribe button
+{
+    position: absolute;
+    padding: 10px 25px;
+    top: 7;
+    right:20;
+}
+
+#footer .social i
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #292b33;
+    color: #009ad8;
+}
+
+#footer .social i:hover
+{
+    background: #009ad8;
+    color: #ffff;
+}
+
+
+
+
