@@ -1,197 +1,130 @@
 <html>
     <head>
-        <title id="title">Weather</title>
+        <title id="title">Party</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/all.min.css">
         <link rel="stylesheet" href="css/index_style.css">
     </head>
-    <body  class="bg-dark">
-        
-        <header>
-            <nav class="  navbar navbar-expand-lg navbar-dark bg-dark py-5">
-                <div class="container ">
-
-                    <a href="#" class=" text-decoration-none">
-                                <img src="imags/img.png" alt="Weather" class="me-3 ">
-                                <div class="logoContent float-end">
-                                    <h1 class=" title text-white fs-6">Weather</h1>
-                                    <p class="description text-white">tagline goes here</p>
-                                </div>
-                    </a>
-
-                    <div class="d-flex">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class=" navlinks collapse navbar-collapse " id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                        <a class="nav-link active rounded-pill" aria-current="page"  href="#">Home</a>
-                        <a class="nav-link rounded-pill" aria-current="page" href="#">News</a>
-                        <a class="nav-link rounded-pill" aria-current="page" href="#">Live cameras</a>
-                        <a class="nav-link rounded-pill" aria-current="page" href="#">Photos</a>
-                        <a class="nav-link rounded-pill" aria-current="page" href="#">Contact</a>
-                        </div>
-                    </div>
-                    </div>
-                    </div>
-                </nav>
-        </header>
-
+    <body>
 
         <section id="home">
+            <div class="home">
+                  <nav class="nav position-relative"> 
+                <div class="navslider py-5">
+                    <i class="fas fa-times fs-5 pe-3  hide" id="hide"></i>    
+                    <ul >
+                        <li> <a href="#home">Home</a></li>
+                        <li> <a href="#details">Duration</a></li>
+                        <li> <a href="#duration">Detalis</a></li>
+                        <li> <a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="navopen">
+                        <i class="fas fa-bars m-3 fs-3 text-white" id="navopen"><span class=" ms-2 text-white fs-3">Open</span></i>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="content d-flex justify-content-center align-items-center h-100 w-100">
+                <div class="col-4 text-center">
+                        <h1>Egyption Party</h1>
+                        <p>Let's have Fun</p>
+                </div>
+            </div>
+            </div>
+          
+           
+
             
 
-                <div class="homeContent ">
-                    <div class=" findloaction py-5" >
-                        <input id="findloaction" type="text" placeholder="Find Your location..." class=" text-white form-control w-75 m-auto rounded-pill bg-dark p-3 border-0 " >
 
-                        <button class=" find btn btn-primary rounded-pill">Find</button>
-                    </div>
+            
 
-                    <div class=" container">
-                        <div class="row">
-                            <div class=" today col-8 bg-dark text-white m-auto border border-2 border-info">
-                                <div class="header my-3 d-flex justify-content-between">
-                                    <p id="Day"></p>
-                                    <p id="DayInmonth"></p>
-                                </div>
-                                <div class="todaycontent">
-                                    <div class="nameofcity"> <h4 id="nameofcity" class=" fs-4 ps-2 pt-2"></h4> </div>
+            
+        </section>
 
-                                    <div class="degree d-flex justify-content-around align-items-center  ">
-                                        <div>
-                                            <h2 class= "ms-5" id="degree">°C</h2>
-                                        </div>
-                                        <img src="" class=" CurrentIcon img-fluid">
-                                    </div>
+        <section id="details">
+            <div class="details text-center py-2 col-6 m-auto my-5 ">
+                    <h3>Singer one</h3>
+                    <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 
-                                    <div>
-                                        <h5 class="condition ps-2 text-info" id="condition"> </h5>
-                                                <!-- <!=========icons==========!> -->
-                                        <div class=" boxIcons text-white d-flex justify-content-between pt-3">
-                                            <div>
-                                                <img src="imags/icons/cloudy.svg" class=""> <span id="cloud"></span>
-                                                <br>
-                                                <span class="cloud">cloud</span>
-                                            </div>
+                    <h3>Singer two</h3>
+                    <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 
-                                            <div>
-                                                <img src="imags/icons/wind.svg" class=""><span id="Wind"></span>
-                                                <br>
-                                                <span class="Wind">Wind</span>
-                                            </div>
+                    <h3>Singer three</h3>
+                    <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 
-                                            <div>
-                                                <img src="imags/icons/windsock.svg" class=""> <span id="WindDirection"></span>
-                                                <br>
-                                                <span class="WindDirection">Wind Direction</span>
-                                            </div>
-                                        </div>
+                    <h3>Singer four</h3>
+                    <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                
+            </div>
+        </section>
 
-                                        <div class=" py-3 boxIcons text-white d-flex justify-content-between pt-3">
-                                            <div>
-                                                <img src="imags/icons/sunrise.svg" class=""> <span id="Sunrise"></span>
-                                                <br>
-                                                <span class="Sunrise">Sunrise</span>
-                                            </div>
+        <section id="duration" class="text-center">
 
-                                            <div>
-                                                <img src="imags/icons/sunset.svg" class=""><span id="Sunset"></span>
-                                                <br>
-                                                <span class="Sunset">Sunset</span>
-                                            </div>
-
-                                            <div>
-                                                <img src="imags/icons/moonrise.svg" class=""> <span id="Moonrise"></span>
-                                                <br>
-                                                <span class="Moonrise">Moonrise </span>
-                                            </div>
-
-                                            <div>
-                                                <img src="imags/icons/moonset.svg" class=""> <span id="Moonset"></span>
-                                                <br>
-                                                <span class="Moonset">Moonset</span>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
+        
+            <div class="duration">
+                <div class=" container py-5">
+                    <div class="row py-5">
+                        <div class="col-3 p-5 bg-transparent border border-1 border-white">
+                            <p> <span id="day"></span> D</p>
+                        </div>
+                        <div class="col-3 p-5 bg-transparent border border-1 border-white">
+                            <p><span id="houres"></span> H</p>
+                        </div>
+                        <div class="col-3 p-5 bg-transparent border border-1 border-white">
+                            <p><span id="min"></span> M</p>
+                        </div>
+                        <div class="col-3 p-5 bg-transparent border border-1 border-white">
+                            <p><span id="sec"></span> S</p>
                         </div>
                     </div>
-
-                    <div class="container">
-                                <!-- <!=======================NextDay=====================> -->
-                        <div class="row justify-content-center">
-                            <h2 class="text-info text-center py-3">Next Days</h2>
-                            <div class="NextDay text-white col-4 border border-2 border-info">
-                                <div class=" py-3 text-white nextDayhead d-flex justify-content-between">
-                                    <p id="Day_nextDay"></p>
-                                    <p id="Day_NextDayInmonth"></p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="text-center"><img src="" class=" nextdayicon img-fluid w-50"></div>
-                                    <div class=" d-flex justify-content-center">
-                                        <div> <span class="nextmax text-center" id="nextDaymaxTemp"></span></div>
-                                        <div> <span class="nextmin text-center" id="nextDayminTemp"></span></div>
-                                    </div>
-                                    <div class="py-2"><span class="text-info text-center" id="NextDayCondition"></span></div>
-                                </div>
-                            </div>
-                                <!-- <!=======================NextDay2=====================> -->
-                            <div class="NextDay2 text-white col-4 border border-2 border-info">
-                                <div class=" py-3 nextDay2head d-flex justify-content-between">
-                                    <p id="Day_nextDay2"></p>
-                                    <p id="Day_NextDayInmonth2"></p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="text-center"><img src="" class=" nextdayicon2 img-fluid w-50"></div>
-                                    <div class=" d-flex justify-content-center">
-                                        <div> <span class="nextmax2 text-center" id="nextDay2maxTemp"></span></div>
-                                        <div> <span class="nextmin2 text-center" id="nextDay2minTemp"></span></div>
-                                    </div>
-                                    <div class="py-2"><span class="text-info" id="NextDay2Condition"></span></div>
-                                    
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-
                 </div>
+            </div>
 
         </section>
 
-        <footer id="footer"> 
-
-                <div class="container py-5">
-                    <div class=" row justify-content-around ">
-                                <div class=" box-subscribe col-8">
-                                    <input id="subscribe" type="text" placeholder="Enter Your Email To subscribe" class="text-white form-control w-100 rounded-pill bg-dark p-3 border-2 " >
-                                    <button class="btn btn-primary rounded-pill">subscribe</button>
-                                </div>
-                        
-                        <div class=" col-4">
-                            <div class=" social d-flex justify-content-center align-items-center flex-row">
-                                <i class="fab fa-facebook fs-3 p-2"></i>
-                                <i class="fab fa-twitter fs-3 p-2"></i>
-                                <i class="fab fa-google-plus fs-3 p-2"></i>
-                                <i class="fab fa-pinterest fs-3 p-2 "></i>
-                            </div>
+        <section id="contact">
+            <div class=" container py-5 mb-5">
+                <h2  class="py-3">JOIN US</h2>
+                <p class="text-center ">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                <div class="row">
+                    <div class="col-6">
+                        <h4 class="">CONTACT INFO</h4>
+                        <p class="text-center pb-5">Why you should hire me writeup Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque nascetur ridiculus mus.</p>
+    
+                        <div class="address text-center">
+                            <i class="fas fa-map-marker-alt"> <span>New Street 22545, Nexa Road, New York City, USA</span></i>
+                            <i class="fas fa-envelope d-block"><span class="text-danger">hello@uigrid.com</span></i> 
+                            <i class="fas fa-phone-alt"><span >001-000-000-000</span></i>
                         </div>
+    
+                        <div class=" soical py-5">
+                            <i class="fab fa-facebook-f "></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-google-plus-g"></i>
+                            <i class="fab fa-github"></i>
+                            <i class="fab fa-behance-square"></i>
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+        
                     </div>
-
-                    <div class="pt-3 text-white">
-                        <p>Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+    
+                    <div class="col-6">
+                        <input type="text" placeholder="Enter Name " class=" form-control py-3 my-4">
+                        <input type="text" placeholder="Enter Email "class=" form-control py-3 my-4">
+                        <textarea id="submit" placeholder="Enter message"class=" form-control h-50"></textarea>
+    
+                        <h5 class="py-3"> <span id="max" class="text-danger">100</span> Characyer Reamining</h5>
+                        <button class=" btn btn-danger px-3 ">Send Message</button>
+    
                     </div>
                 </div>
-            
-        </footer>
-
-
-
+            </div>
+        </section>
+        
         
         <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/Declaration-And-Icons.js"></script>
+        <script src="js/jquery-3.6.0.js"></script>
         <script src="js/mine.js"></script>
     </body>
 </html>

@@ -1,98 +1,81 @@
-
-//<!================================ weather functions ===================================>
-findloaction.addEventListener("keyup",function()
-    {
-        weather(findloaction.value)
-    })
-weather()
-
-            // <!=================================================== API Fetching ================================================!>
-async function weather(city = `auto:ip`)
+//<!============================== navBar Slider functions ===========================!>
+let sliderPostion = $(".navslider").innerWidth()
+$(".navopen").click(function()
 {
-        Http = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=4d86f756e23341bdb4f14102211809&q=${city}&days=7`)
-        Http = await Http.json()
-        
-            // <!=====================GeT Day & month=======================!>
-    var d = new Date();
-    var weekday = new Array(7);
-    weekday[0] = "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Friday";
-    weekday[6] = "Saturday";
-    var n = weekday[d.getDay()];
-    var nextDay = weekday[d.getDay()+1]
-    var nextDay2 = weekday[d.getDay()+2]
-    const monthNames = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"];
+    currentPostion = $(".navslider").css("left")
+    if(currentPostion == `0px`)
+    {
+        $(".navslider").animate({left:-sliderPostion},"2000")
+    }
+    else
+    {
+        $(".navslider").animate({left:`0px`},"2000")
+    }
+})
 
-            // <!================================================================================================!>
-                            // <!==================== current Day icon ======================!>
-        for(let i = 0 ; i < allIcons.length ;i++)
-        {
-            if(allIcons[i].code == Http.current.condition.code && allIcons[i].time == Http.current.condition.icon.includes("day"))
-            {
-                icon = allIcons[i].icon;
-            }
-            else if(allIcons[i].code == Http.current.condition.code && allIcons[i].time != Http.current.condition.icon.includes("night"))
-            {
-                icon = allIcons[i].icon;
-            }
-        }
-    CurrentIcon.setAttribute("src" , icon)
-    Day.innerHTML = n;  //Name of The Day 
-    DayInmonth.innerHTML = d.getDate() + " " + monthNames[d.getMonth()];    // Day and Month
-    NameofCity.innerHTML = Http.location.name; // city Name
-    Degree.innerHTML = Http.current.temp_c + `°C`;    // current temp
-    condition.innerHTML = Http.current.condition.text;   //current condition
-    cloud.innerHTML = Http.current.cloud +"%" ; //current cloud
-    Wind.innerHTML = Http.current.wind_kph + "kph"; //current wind speed
-    WindDirection.innerHTML = Http.current.wind_dir;    //current wind Direction
-    Sunrise.innerHTML = Http.forecast.forecastday[0].astro.sunrise;
-    Sunset.innerHTML = Http.forecast.forecastday[0].astro.sunset;
-    Moonrise.innerHTML = Http.forecast.forecastday[0].astro.moonrise;
-    Moonset.innerHTML = Http.forecast.forecastday[0].astro.moonset;
-            // <!================================================================================================!>
-                        // <!======================== next Day icon ============================!>
-        for(let i = 0 ; i < allIcons.length ;i++)
-        {
-            if(allIcons[i].code == Http.forecast.forecastday[1].day.condition.code && allIcons[i].time == Http.forecast.forecastday[1].day.condition.icon.includes("day"))
-            {
-                Nexticon = allIcons[i].icon;
-            }
-            else if(allIcons[i].code == Http.forecast.forecastday[1].day.condition.code && allIcons[i].time != Http.forecast.forecastday[1].day.condition.icon.includes("night"))
-            {
-                Nexticon = allIcons[i].icon;
-            }
-        }
-        nextdayicon.setAttribute("src" , Nexticon)
-        Day_nextDay.innerHTML = nextDay ;
-        Day_NextDayInmonth.innerHTML = d.getDate()+1 + " " + monthNames[d.getMonth()]
-        nextDaymaxTemp.innerHTML = Http.forecast.forecastday[1].day.maxtemp_c + `°C` +` / ` ;
-        nextDayminTemp.innerHTML = Http.forecast.forecastday[1].day.mintemp_c + `°C`;
-        NextDayCondition.innerHTML = Http.forecast.forecastday[1].day.condition.text;
 
-                // <!================================================================================================!>
-                            // <!===================== next Day icon ==========================!>
-        for(let i = 0 ; i < allIcons.length ;i++)
-        {
-            if(allIcons[i].code == Http.forecast.forecastday[2].day.condition.code && allIcons[i].time == Http.forecast.forecastday[2].day.condition.icon.includes("day"))
-            {
-                Nexticon2 = allIcons[i].icon;
-            }
-            else if(allIcons[i].code == Http.forecast.forecastday[2].day.condition.code && allIcons[i].time != Http.forecast.forecastday[2].day.condition.icon.includes("night"))
-            {
-                Nexticon2 = allIcons[i].icon;
-            }
-        }
-    nextdayicon2.setAttribute("src" , Nexticon2)
-    Day_nextDay2.innerHTML = nextDay2 ;
-    Day_NextDayInmonth2.innerHTML = d.getDate()+2 + " " + monthNames[d.getMonth()]
-    nextDay2maxTemp.innerHTML = Http.forecast.forecastday[2].day.maxtemp_c + `°C` +` / ` ;
-    nextDay2minTemp.innerHTML = Http.forecast.forecastday[2].day.mintemp_c + `°C`;
-    NextDay2Condition.innerHTML = Http.forecast.forecastday[2].day.condition.text;
-}
+$(".hide").click(function () 
+{ 
+    let sliderPostion = $(".navslider").innerWidth()
+    $(".navslider").animate({left:-sliderPostion},"2000")
+});
 
+$(".details h3").click(function()
+{
+    $(this).next().slideToggle(500)
+    $(".details p").not( $(this).next() ).slideUp()
+})
+
+//<!==========================================================================================!>
+
+$("#submit").keyup(function () 
+{
+    let maxchar = 100
+    if($("#submit").val().length >= 100)
+    {
+        $("#max").text("your available character finished")
+    }
+    else
+    {
+        $("#max").text(maxchar - $("#submit").val().length)
+    }
+});
+
+//<!========= navBar scrolling functions =======!>
+
+$(".navslider a").click(function()
+{
+    let ahref = $(this).attr("href");
+    let sectionPosition = $(ahref).offset().top;
+    $("html , body").animate({scrollTop:sectionPosition},1000)
+})
+
+
+// <!===================================================================================================>
+
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 1, 2022").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result
+        $("#duration #day").text(days)
+        $("#houres").text(hours)
+        $("#min").text(minutes)
+        $("#sec").text(seconds)
+
+}, 1000);
 
